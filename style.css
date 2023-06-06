@@ -1,0 +1,116 @@
+:root {
+    --font-text: 'Poppins', sans-serif;
+    --font-title: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    background: none;
+    border: none;
+}
+
+p, h1 {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+body {
+    max-width: 100%;
+}
+
+.container > .img > img {
+    width: 100vw;
+}
+
+.texts {
+    margin-inline: 5vw;
+    width: 90vw;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.texts > h1 {
+    font-size: 2rem;
+    font-family: var(--font-title);
+}
+
+.texts > p:nth-child(2n){
+    font-weight: 600;
+}
+
+.texts > p {
+    font-family: var(--font-text);
+    text-align: justify;
+    font-weight: 400;
+}
+
+.stats {
+    margin-inline: 5vw;
+    width: 90vw;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats > .seguidores, .seguindo, .posts {
+    width: 4.5rem;
+    text-align: center;
+    font-family: var(--font-text);
+    font-weight: 400;
+}
+
+.stats > .seguidores > p:first-child, .seguindo > p:first-child, .posts > p:first-child {
+    font-size: 2rem;
+}
+
+.stats > .seguidores > p:last-child, .seguindo > p:last-child, .posts > p:last-child {
+    font-size: 0.75rem;
+    color: #999;
+    font-weight: 600;
+}
+
+@media (min-width: 576px) {
+
+    .container {
+        height: 40vh;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container > .img > img {
+        width: 35vw;
+    }
+
+    .texts {
+        width: 55vw;
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .texts > p {
+        font-family: var(--font-text);
+        font-size: 0.9rem;
+        text-align: justify;
+        font-weight: 400;
+    }
+
+    .stats {
+        width: 55vw;
+
+        margin-top: 1rem;
+    
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
